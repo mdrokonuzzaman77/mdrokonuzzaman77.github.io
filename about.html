@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=0" /><meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+    <title>Sacramento Interior Designer</title>
+    <link rel="stylesheet" href="css/about.css">
+	
+	<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function(){
+            emailjs.init("YOUR_USER_ID"); // Replace with your EmailJS user ID
+        })();
+        
+        function sendEmail(event) {
+            event.preventDefault();
+            const email = document.getElementById('email').value;
+            const firstName = document.getElementById('first-name').value;
+            const lastName = document.getElementById('last-name').value;
+
+            const templateParams = {
+                email: email,
+                first_name: firstName,
+                last_name: lastName
+            };
+
+            emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", templateParams)
+                .then(function(response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    document.getElementById('contact-form').style.display = 'none';
+                    document.getElementById('thank-you').style.display = 'block';
+                }, function(error) {
+                    console.log('FAILED...', error);
+                    alert('Failed to send email. Please try again later.');
+                });
+        }
+    </script>
+	
+	
+</head>
+<body>
+   <header>
+
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+    <div class="header-container">
+    <a href="home.html">
+    <img src="Screenshot 2024-07-3asdsdasfds1 at 00-28-36 logo_no_background.png (PNG Image 717 × 348 pixels).png" alt="Logo" class="logo">
+</a>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <div class="menu">
+        <a href="about.html">About</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="services.html">Services</a>
+        <a href="theprocess.html">The Process</a>
+        <a href="virtualdesign.html">Virtual Design</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+    </div>
+<a href="https://www.instagram.com/designed_curated/" target="_blank" class="no-underline">
+    <img src="Instagram_icon-removebg-preview.png" alt="Social Media" class="social-media">
+	</a>
+</div>
+</header>
+
+    
+	
+	<div class="spacer"></div>
+	
+	
+	<main>
+	
+   
+        <section class="content">
+           <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+            
+            <h1>About Us.</h1>
+            <div class="spacer"></div>
+			<div class="spacer"></div>
+			<h3>Designed | Curated Interiors is a design studio based in Sacramento, California and offers interior design services throughout Northern California.</h3>
+			<div class="spacer"></div>
+			<div class="spacer"></div>
+            <p>Our belief is that beautiful design, at its essence, should reflect the unique style and interests of each client. Our focus is to create spaces that not only look incredible but also function to meet your lifestyle and needs. From renovations to space planning to the finishing touches, Designed | Curated Interiors will transform the look, feel and function of your space in a way that elevates the design of your home while also reflecting you.  We design a wide range of styles-  from Farmhouse to Modern Mountain to Mid-Century Modern and everything in between. <a href="book.html" target="_blank" class="link">Click here</a> to request your Inquiry Call today.
+			</p>
+          
+            <div class="spacer"></div>
+			
+			<div class="spacer"></div>
+			<div class="spacer"></div>
+			<div class="spacer"></div>
+			
+			
+			<section class="hero">
+        <img src="Screenshot 2024-08-01 at 02-36-51 617E00DC-0A3D-4200-8DE5-26237F84A801.jpeg (WEBP Image 683 × 1024 pixels) — Scaled (92%).png" alt="Hero Image" class="hero-image">
+		 <div class="spacer"></div>
+			<h4>Meet Amy!</h4>
+			<div class="spacer"></div>
+            <p>I am the principle interior designer at Designed | Curated Interiors. Like many artists, I didn't initially seek a career in design- my creative path found me. Despite my life-long love of interior design, I pursued a more conventional profession in marketing after getting a master's degree in Communication Studies. I loved meeting with clients, managing complex projects, and the fast pace of the job but over time, I found I was ready to explore other talents. I embraced my creative drive and went back to school to earn my interior design degree. I am certified in Universal Design and Design4Life as I am passionate about making homes accessible for all and allowing seniors to live in their own homes longer. I worked as an interior designer for a high-end residential interior design studio for several years, gaining invaluable knowledge and experience that I apply in my own interior design business today.</p>
+            
+			<div class="spacer"></div>
+			
+			<img src="Screenshot_2024-08-01_at_02-16-54_Screenshot-2024-04-08-at-9.48.09-AM.png__WEBP_Image_150___132_pixels_-removebg-preview.png">
+            <div class="spacer"></div>
+            <div class="spacer"></div>
+			</section>
+			
+			<div class="spacer"></div>
+			<div class="spacer"></div>
+			<div class="spacer"></div>
+			
+		
+</main>
+			
+			
+			
+			<section class="form-section">
+        <div class="container">
+            <form id="contact-form" onsubmit="sendEmail(event)">
+                <label for="email">Email<span>*</span></label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" name="first-name">
+                
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" name="last-name">
+                
+                <button type="submit">Submit</button>
+            </form>
+            <div id="thank-you" style="display:none;">
+                <h1>Thank You!</h1>
+                <p>Your message has been sent successfully. We will get back to you soon.</p>
+            </div>
+        </div>
+    </section>
+	
+	<div class="spacer"></div>
+			<div class="spacer"></div>
+			<div class="spacer"></div>
+			<div class="spacer"></div>
+	
+	
+	<div class="footer">
+    <div class="footer-section contact-info">
+        <h2>Contact Info</h2>
+        <ul>
+            <li><strong>Phone:</strong> 916-756-5977</li>
+            <li><strong>Email:</strong> amy@designedcurated.com</li>
+            <li><strong>Address:</strong> Sacramento, California</li>
+             <li><strong>Follow:</strong> 
+            <a href="https://www.instagram.com/designed_curated/" target="_blank" class="no-underline">
+                <img src="Instagram_icon-removebg-preview.png" alt="Instagram" class="social-icon"> 
+                @designed_curated
+            </a>
+        </li>
+        </ul>
+    </div>
+    <div class="footer-section useful-info">
+        <h2>Useful Info</h2>
+        <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="theprocess.html">The Process</a></li>
+            <li><a href="book.html">Complimentary 30 Minute Inquiry Call</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </div>
+</div>
+
+			
+		
+
+</body>
+
+</html>
+			
+			
+
+
+	
+	
+	
